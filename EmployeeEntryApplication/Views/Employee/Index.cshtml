@@ -1,0 +1,51 @@
+﻿@model List<EmployeeEntryApplication.Models.Employee>
+
+
+@{
+    ViewData["Title"] = "View1";
+}
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="col">
+                    First Name
+                </th>
+                <th class="col">
+                    City
+                </th>
+                <th class="col">
+                    Joining Date
+                </th>
+            </tr>
+        </thead>
+@foreach (var employee in @Model)
+{
+    
+            <tbody>
+                <tr>
+                    <td>
+                        @employee.FirstName
+                    </td>
+                    <td>
+                        @employee.CityName
+                    </td>
+                    <td>
+                        @employee.YearOfJoining.ToShortDateString()
+                    </td>
+                </tr>
+            </tbody>
+}
+        </table>
+    </div>
+
+
+
+<hr />
+
+
+<div>
+    <a asp-action="SaveEmployee">Create Employee</a>
+</div>
+

@@ -1,0 +1,52 @@
+﻿@model EmployeeEntryApplication.Models.Employee
+
+@{
+    ViewData["Title"] = "SaveEmployee";
+}
+
+<h4>Employee</h4>
+<hr />
+<form asp-controller="Employee" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <label asp-for=@Model.FirstName></label>
+        </div>
+        <div class="col-md-6">
+            <input asp-for="FirstName" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6"><br /></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label asp-for="CityName"></label>
+        </div>
+        <div class="col-md-6">
+            <input asp-for="CityName" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6"><br /></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label asp-for="YearOfJoining"></label>
+        </div>
+        <div class="col-md-6">
+            <input asp-for="YearOfJoining" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6"><br /></div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-6"><br /></div>
+            <div class="col-md-6">
+        <input type="submit" formaction="SaveEmployee" value="Save" class="btn btn-primary float-right" />
+        <input type="submit" formaction="Index" value="Retrieve" class="btn btn-primary float-right" />
+            </div>
+        </div>
+    </div>
+</form>
